@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Concepts Demo</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Section 1: Positioning & Floats -->
+    <section class="concept-section">
+      <h2>Positioning & Floats</h2>
+
+      <!-- Position Demo: Shows different types of positioning -->
+      <div class="position-demo">
+        <h3>Position Properties</h3>
+        <div class="position-container">
+          <!-- Static positioning (default behavior) -->
+          <div class="position-box static">Static (default)</div>
+          <!-- Relative positioning (positioned relative to its normal position) -->
+          <div class="position-box relative">Relative</div>
+          <!-- Absolute positioning (positioned relative to nearest positioned ancestor) -->
+          <div class="position-box absolute">Absolute</div>
+          <!-- Fixed positioning (positioned relative to viewport) -->
+          <div class="position-box fixed">Fixed</div>
+          <!-- Sticky positioning (hybrid of relative and fixed) -->
+          <div class="position-box sticky">Sticky</div>
+        </div>
+      </div>
+
+      <!-- Float Demo: Shows how elements can float left or right -->
+      <div class="float-demo">
+        <h3>Float Properties</h3>
+        <div class="float-container">
+          <!-- Elements that float to the left or right of their container -->
+          <div class="float-box float-left">Float Left</div>
+          <div class="float-box float-right">Float Right</div>
+          <!-- Clear property prevents floating elements from affecting this text -->
+          <p class="clear-demo">
+            Text that flows around floated elements. Using clear property to
+            prevent this.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Navigation using Lists -->
+    <section class="concept-section">
+      <h2>Lists & Navigation</h2>
+
+      <!-- Navigation menu using unordered list -->
+      <nav class="nav-demo">
+        <ul>
+          <!-- Navigation items with anchor tags -->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Section 3: Flexbox Layout -->
+    <section class="concept-section">
+      <h2>Flexbox</h2>
+
+      <!-- Flex container with flex items -->
+      <div class="flex-container">
+        <!-- Flex items that will grow and shrink dynamically -->
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+      </div>
+    </section>
+
+    <!-- Section 4: CSS Grid Layout -->
+    <section class="concept-section">
+      <h2>CSS Grid</h2>
+
+      <!-- Grid container with grid items -->
+      <div class="grid-container">
+        <!-- Grid items that will be arranged in columns and rows -->
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+    </section>
+
+    <!-- Section 5: Responsive Design -->
+    <section class="concept-section">
+      <h2>Responsive Design</h2>
+
+      <!-- Container for responsive content -->
+      <div class="responsive-container">
+        <!-- Box that will adapt to different screen sizes -->
+        <div class="responsive-box">
+          <h3>Resize your browser!</h3>
+          <p>This box will adapt to different screen sizes</p>
+        </div>
+      </div>
+    </section>
+
+    <h1>Understanding Flexbox Axes</h1>
+
+    <!-- Container for flex demos -->
+    <div class="demos-container">
+      <!-- Row Direction Demo -->
+      <section class="concept-section">
+        <h2>Flex Direction: Row (default)</h2>
+        <p class="description">
+          • Main Axis: Horizontal (left to right)<br />
+          • Cross Axis: Vertical (top to bottom)
+        </p>
+
+        <div class="flex-container row">
+          <!-- Arrows showing the axes -->
+          <div class="axis main-axis">
+            <span class="arrow">→</span>
+            <span class="label">Main Axis</span>
+          </div>
+          <div class="axis cross-axis">
+            <span class="arrow">↓</span>
+            <span class="label">Cross Axis</span>
+          </div>
+
+          <!-- Flex items -->
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </section>
+
+      <!-- Column Direction Demo -->
+      <section class="concept-section">
+        <h2>Flex Direction: Column</h2>
+        <p class="description">
+          • Main Axis: Vertical (top to bottom)<br />
+          • Cross Axis: Horizontal (left to right)
+        </p>
+
+        <div class="flex-container column">
+          <!-- Arrows showing the axes -->
+          <div class="axis main-axis">
+            <span class="arrow">↓</span>
+            <span class="label">Main Axis</span>
+          </div>
+          <div class="axis cross-axis">
+            <span class="arrow">→</span>
+            <span class="label">Cross Axis</span>
+          </div>
+
+          <!-- Flex items -->
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Interactive Controls -->
+    <section class="concept-section controls">
+      <h2>Interactive Controls</h2>
+      <div class="control-group">
+        <h3>justify-content (Main Axis):</h3>
+        <select id="justify-content">
+          <option value="flex-start">flex-start</option>
+          <option value="flex-end">flex-end</option>
+          <option value="center">center</option>
+          <option value="space-between">space-between</option>
+          <option value="space-around">space-around</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <h3>align-items (Cross Axis):</h3>
+        <select id="align-items">
+          <option value="flex-start">flex-start</option>
+          <option value="flex-end">flex-end</option>
+          <option value="center">center</option>
+          <option value="stretch">stretch</option>
+          <option value="baseline">baseline</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Add JavaScript for interactive controls -->
+    <script>
+      // Get the select elements
+      const justifySelect = document.getElementById("justify-content");
+      const alignSelect = document.getElementById("align-items");
+
+      // Get all flex containers
+      const flexContainers = document.querySelectorAll(".flex-container");
+
+      // Add event listeners for justify-content changes
+      justifySelect.addEventListener("change", function (e) {
+        flexContainers.forEach((container) => {
+          container.style.justifyContent = e.target.value;
+        });
+      });
+
+      // Add event listeners for align-items changes
+      alignSelect.addEventListener("change", function (e) {
+        flexContainers.forEach((container) => {
+          container.style.alignItems = e.target.value;
+        });
+      });
+    </script>
+  </body>
+</html>
